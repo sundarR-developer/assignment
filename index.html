@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="demo.js" >
+      function lable_creator( tagname,attrename,attripval,contant){
+
+var eles = document.createElement(tagname);
+eles.setAttribute(attrename,attripval)
+eles.innerHTML=contant
+return eles
+}
+function submitbutton(subname,subattname,subattval,subattname1,subattval1,evename,eveval){
+    var submit= document.createElement(subname);
+    submit.setAttribute(subattname,subattval)
+    submit.setAttribute(subattname1,subattval1)
+    submit.setAttribute(evename,eveval)
+    
+    return submit
+    
+
+}
+function input_creator( iptagename,ipattname1,ipattval1,ipattname2,ipattval2){
+    var inputs = document.createElement(iptagename);
+    inputs.setAttribute(ipattname1,ipattval1)
+    inputs.setAttribute(ipattname2,ipattval2)
+
+    return inputs;
+}
+function line_break(){
+    var br = document.createElement('br');
+    return br;
+
+}
+var firstName=lable_creator("lable","for","text","First name: ")
+
+var firstName_input=input_creator("input","type","text","id","text")
+document.body.append(firstName,line_break(),firstName_input,line_break())
+
+var middleName=lable_creator("lable","for","text1","Middle name: ")
+
+var MiddleName_input=input_creator("input","type","text","id","text1")
+document.body.append(middleName,line_break(),MiddleName_input,line_break())
+
+var lastName=lable_creator("lable","for","text2","Last name: ")
+
+var lastName_input=input_creator("input","type","text","id","text2")
+document.body.append(lastName,line_break(),lastName_input,line_break())
+
+
+var emails=lable_creator("lable","for","email","Email: ")
+
+var emails_input=input_creator("input","type","email","id","email")
+document.body.append(emails,line_break(),emails_input,line_break())
+
+
+
+var submit_input= submitbutton("input","type","submit","id","submit",'onclick','viewresult()')
+                  
+document.body.append(submit_input,line_break())
+
+
+function viewresult(){
+      var out1=document.getElementById("text").value
+    var out2=document.getElementById("text1").value
+    var out3=document.getElementById("text2").value 
+    var out4=document.getElementById("email").value
+       console.log(out1)
+       console.log(out2)
+       console.log(out3)
+       console.log(out4)
+    }
+    </script>
+    
+</body>
+</html>
