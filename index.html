@@ -58,7 +58,10 @@ var emails=lable_creator("lable","for","email","Email: ")
 var emails_input=input_creator("input","type","email","id","email")
 document.body.append(emails,line_break(),emails_input,line_break())
 
+var passwort=lable_creator("lable","for","password","Password: ")
 
+var passwort_input=input_creator("input","type","password","id","password")
+document.body.append(passwort,line_break(),passwort_input,line_break())
 
 var submit_input= submitbutton("input","type","submit","id","submit",'onclick','viewresult()')
                   
@@ -70,10 +73,12 @@ function viewresult(){
     var out2=document.getElementById("text1").value
     var out3=document.getElementById("text2").value 
     var out4=document.getElementById("email").value
+   var out5=document.getElementById("password").value
        console.log(out1)
        console.log(out2)
        console.log(out3)
        console.log(out4)
+       console.log(out5)
     }
     </script>
     
